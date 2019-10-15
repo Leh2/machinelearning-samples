@@ -193,7 +193,7 @@ namespace GitHubLabeler
                     issueUpdate.AddLabel(fullPrediction.PredictedLabel);
                     _client.Issue.Update(_repoOwner, _repoName, issue.Number, issueUpdate);
 
-                    Console.WriteLine($"Issue {issue.Number} : \"{issue.Title}\" \t was labeled as: {fullPredictions[0].PredictedLabel}");
+                    Console.WriteLine($"Issue {issue.Number} : \"{issue.Title}\" \t was labeled as: {fullPrediction.PredictedLabel}");
                 }
             }
         }
